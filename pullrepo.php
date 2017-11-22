@@ -12,7 +12,7 @@ if(!empty($_POST)){
 	
 	$path = $_POST["path"];
 	
-	if(strlen($path) && is_dir($path)){
+	if(strlen($path)){
 		
 		$exp_path = explode(":/", $path);
 		
