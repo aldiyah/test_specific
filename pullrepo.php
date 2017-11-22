@@ -18,8 +18,9 @@ if(!empty($_POST)){
 		
 		$path = "/".$exp_path[0].$exp_path[1];
 		
-		$str_command = "git pull ".trim($path);
+		chdir(trim($path));
 		
+		$str_command = "git pull";
 		echo exec($str_command);
 		
 		echo "<br />";
