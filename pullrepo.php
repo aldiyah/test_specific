@@ -14,6 +14,9 @@ if(!empty($_POST)){
 	
 	if(strlen($path) && is_dir($path)){
 		
+		$exp_path = explode(":/", $path);
+		
+		$path = "/".$exp_path[0].$exp_path[1];
 		
 		$str_command = "git pull ".trim($path);
 		
